@@ -19,6 +19,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class HomeActivity extends AppCompatActivity {
@@ -84,7 +85,7 @@ public class HomeActivity extends AppCompatActivity {
         }) {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
-                Map<String, String> headers = super.getHeaders();
+                Map<String, String> headers = new HashMap<>();
                 headers.put("Content-Type", "application/json");
 
                 return headers;
